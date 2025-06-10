@@ -203,12 +203,12 @@ public partial class MainForm : Form
         public string StatusText =>
             this.Status switch
             {
-                ServiceControllerStatus.Running => "Running",
-                ServiceControllerStatus.Stopped => "Stopped",
-                ServiceControllerStatus.Paused => "Paused",
-                ServiceControllerStatus.StartPending => "Starting...",
-                ServiceControllerStatus.StopPending => "Stopping...",
-                _ => "Unknown",
+                ServiceControllerStatus.Running => "実行中",
+                ServiceControllerStatus.Stopped => "停止中",
+                ServiceControllerStatus.Paused => "一時停止",
+                ServiceControllerStatus.StartPending => "開始中...",
+                ServiceControllerStatus.StopPending => "停止中...",
+                _ => "不明",
             };
 
         /// <summary>
