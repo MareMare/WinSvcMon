@@ -1,0 +1,17 @@
+{
+  "Services": [
+    {
+      "ServiceName": "Service01",
+      "DisplayName": "My First Service"
+    },
+    {
+      "ServiceName": "Service02",
+      "DisplayName": "My Second Service"
+    },
+    {
+      "ServiceName": "Service03",
+      "DisplayName": "My Third Service"
+    }
+  ],
+  "MonitoringIntervalSeconds": 5
+}
