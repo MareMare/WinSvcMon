@@ -2,6 +2,8 @@
 
 Windows サービスの監視と操作を行うアプリケーションです。
 
+![image](https://github.com/user-attachments/assets/9768314a-7913-4099-a37f-e947869c6aa5)
+
 ## プロジェクト概要
 
 WinSvcMon（Windows Service Monitor）は、Windows サービスの状態を監視し、操作するためのグラフィカルユーザーインターフェイスを提供するアプリケーションです。このアプリケーションを使用することで、複数の Windows サービスの状態をリアルタイムで監視し、必要に応じてサービスの開始や停止などの操作を行うことができます。
