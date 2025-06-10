@@ -37,34 +37,6 @@ partial class MainForm
             ((System.ComponentModel.ISupportInitialize)(servicesGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // ColumnOfDisplayName
-            // 
-            this.ColumnOfDisplayName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnOfDisplayName.HeaderText = "サービス表示名";
-            this.ColumnOfDisplayName.Name = "ColumnOfDisplayName";
-            this.ColumnOfDisplayName.ReadOnly = true;
-            // 
-            // ColumnOfServiceName
-            // 
-            this.ColumnOfServiceName.HeaderText = "サービス名";
-            this.ColumnOfServiceName.Name = "ColumnOfServiceName";
-            this.ColumnOfServiceName.ReadOnly = true;
-            this.ColumnOfServiceName.Width = 120;
-            // 
-            // ColumnOfServiceState
-            // 
-            this.ColumnOfServiceState.HeaderText = "状態";
-            this.ColumnOfServiceState.Name = "ColumnOfServiceState";
-            this.ColumnOfServiceState.ReadOnly = true;
-            // 
-            // ColumnToChangeState
-            // 
-            this.ColumnToChangeState.HeaderText = "操作";
-            this.ColumnToChangeState.Name = "ColumnToChangeState";
-            this.ColumnToChangeState.ReadOnly = true;
-            this.ColumnToChangeState.Text = "切替";
-            this.ColumnToChangeState.UseColumnTextForButtonValue = true;
-            // 
             // servicesGridView
             // 
             servicesGridView.AllowUserToAddRows = false;
@@ -87,6 +59,35 @@ partial class MainForm
             servicesGridView.Size = new System.Drawing.Size(604, 421);
             servicesGridView.TabIndex = 2;
             servicesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnServicesGridViewCellContentClick);
+            // 
+            // ColumnOfDisplayName
+            // 
+            this.ColumnOfDisplayName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnOfDisplayName.HeaderText = "サービス表示名";
+            this.ColumnOfDisplayName.Name = "ColumnOfDisplayName";
+            this.ColumnOfDisplayName.ReadOnly = true;
+            // 
+            // ColumnOfServiceName
+            // 
+            this.ColumnOfServiceName.FillWeight = 120F;
+            this.ColumnOfServiceName.HeaderText = "サービス名";
+            this.ColumnOfServiceName.Name = "ColumnOfServiceName";
+            this.ColumnOfServiceName.ReadOnly = true;
+            this.ColumnOfServiceName.Width = 160;
+            // 
+            // ColumnOfServiceState
+            // 
+            this.ColumnOfServiceState.HeaderText = "状態";
+            this.ColumnOfServiceState.Name = "ColumnOfServiceState";
+            this.ColumnOfServiceState.ReadOnly = true;
+            // 
+            // ColumnToChangeState
+            // 
+            this.ColumnToChangeState.HeaderText = "操作";
+            this.ColumnToChangeState.Name = "ColumnToChangeState";
+            this.ColumnToChangeState.ReadOnly = true;
+            this.ColumnToChangeState.Text = "切替";
+            this.ColumnToChangeState.UseColumnTextForButtonValue = true;
             // 
             // MainForm
             // 
