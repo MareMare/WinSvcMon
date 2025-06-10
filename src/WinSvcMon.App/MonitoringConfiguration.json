@@ -5,13 +5,13 @@
       "DisplayName": "My First Service"
     },
     {
-      "ServiceName": "Service02",
-      "DisplayName": "My Second Service"
+      "ServiceName": "Spooler",
+      "DisplayName": "Print Spooler"
     },
     {
-      "ServiceName": "Service03",
-      "DisplayName": "My Third Service"
+      "ServiceName": "MSSQL$SQLEXPRESS",
+      "DisplayName": "SQL Server (SQLEXPRESS)"
     }
   ],
-  "MonitoringIntervalSeconds": 5
+  "MonitoringIntervalSeconds": 1
 }
