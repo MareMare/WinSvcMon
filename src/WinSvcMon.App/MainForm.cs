@@ -111,6 +111,7 @@ public partial class MainForm : Form
         if (serviceInfo != null)
         {
             serviceInfo.Status = e.Status;
+            this.servicesGridView.Refresh(); // DataGridView を更新
         }
     }
 
