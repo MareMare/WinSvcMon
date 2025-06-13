@@ -1,0 +1,17 @@
+{
+  "Services": [
+    {
+      "ServiceName": "Service01",
+      "DisplayName": "My First Service"
+    },
+    {
+      "ServiceName": "Spooler",
+      "DisplayName": "Print Spooler"
+    },
+    {
+      "ServiceName": "MSSQL$SQLEXPRESS",
+      "DisplayName": "SQL Server (SQLEXPRESS)"
+    }
+  ],
+  "MonitoringIntervalSeconds": 1
+}
