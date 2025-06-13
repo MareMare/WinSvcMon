@@ -1,4 +1,11 @@
-﻿using System.Reflection;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="MareMare">
+// Copyright © 2025 MareMare.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
 
