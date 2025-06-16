@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinSvcMon.App", "src\WinSvc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinSvcMon.SdkStyle.App", "src\WinSvcMon.SdkStyle.App\WinSvcMon.SdkStyle.App.csproj", "{2D8FC780-C7CC-464B-B9DA-56150211296E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyService.App.SdkStyle", "dev\MyService.App.SdkStyle\MyService.App.SdkStyle.csproj", "{B220D678-6BD7-1A3B-BCFF-8AE6F72B46B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2D8FC780-C7CC-464B-B9DA-56150211296E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D8FC780-C7CC-464B-B9DA-56150211296E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D8FC780-C7CC-464B-B9DA-56150211296E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B220D678-6BD7-1A3B-BCFF-8AE6F72B46B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B220D678-6BD7-1A3B-BCFF-8AE6F72B46B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B220D678-6BD7-1A3B-BCFF-8AE6F72B46B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B220D678-6BD7-1A3B-BCFF-8AE6F72B46B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
