@@ -66,6 +66,7 @@ public partial class MainForm : Form
         // イベントハンドラの登録
         this.Load += this.MainForm_Load;
         this.FormClosing += this.MainForm_FormClosing;
+        this.servicesGridView.CellFormatting += this.OnServicesGridViewCellFormatting;
         this.servicesGridView.CellContentClick += this.OnServicesGridViewCellContentClick;
     }
 
@@ -121,6 +122,31 @@ public partial class MainForm : Form
     }
 
     /// <summary>
+    /// サービス一覧のセルの内容が表示用に書式指定される際に発生するイベントを処理します。
+    /// </summary>
+    /// <param name="sender">イベントのソースを表すオブジェクト。</param>
+    /// <param name="e">イベントデータを格納した <see cref="DataGridViewCellFormattingEventArgs" />。</param>
+    private void OnServicesGridViewCellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+    {
+        if (e.ColumnIndex != this.ColumnToChangeState.Index || e.RowIndex < 0)
+        {
+            return;
+        }
+
+        // 現在の状態に基づき表示名を設定
+        var serviceInfo = this._serviceList[e.RowIndex];
+        e.Value = serviceInfo.Status switch
+        {
+            ServiceControllerStatus.Running => "停止",
+            ServiceControllerStatus.Stopped => "開始",
+            _ => "切替",
+        };
+
+        // デフォルトのフォーマット処理を阻止
+        e.FormattingApplied = true;
+    }
+
+    /// <summary>
     /// サービス一覧のセルがクリックされた際に発生するイベントを処理します。
     /// </summary>
     /// <param name="sender">イベントのソースを表すオブジェクト。</param>
@@ -136,13 +162,21 @@ public partial class MainForm : Form
         }
 
         var serviceInfo = this._serviceList[e.RowIndex];
-        if (serviceInfo.Status == ServiceControllerStatus.Running)
+        switch (serviceInfo.Status)
         {
-            await this._serviceMonitor.StopServiceAsync(serviceInfo.ServiceName);
-        }
-        else
-        {
-            await this._serviceMonitor.StartServiceAsync(serviceInfo.ServiceName);
+            case null:
+                // Status が null の場合は何もしない
+                break;
+
+            case ServiceControllerStatus.Running:
+                // 実行中の場合は停止を試行
+                await this._serviceMonitor.StopServiceAsync(serviceInfo.ServiceName).ConfigureAwait(true);
+                break;
+
+            case ServiceControllerStatus.Stopped:
+                // 停止中の場合は開始を試行
+                await this._serviceMonitor.StartServiceAsync(serviceInfo.ServiceName).ConfigureAwait(true);
+                break;
         }
     }
 
