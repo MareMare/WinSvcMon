@@ -56,6 +56,11 @@ public partial class MainForm : Form
         var serviceNames = this._config.Services.Select(pair => pair.ServiceName).ToArray();
         this._serviceMonitor = ServiceMonitorFactory.Create(serviceNames);
         this._serviceMonitor.ServiceStatusChanged += this.OnServiceStatusChanged;
+
+        // イベントハンドラの登録
+        this.Load += this.MainForm_Load;
+        this.FormClosing += this.MainForm_FormClosing;
+        this.servicesGridView.CellContentClick += this.OnServicesGridViewCellContentClick;
     }
 
     /// <inheritdoc />

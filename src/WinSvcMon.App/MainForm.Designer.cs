@@ -37,29 +37,6 @@ partial class MainForm
             ((System.ComponentModel.ISupportInitialize)(servicesGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // servicesGridView
-            // 
-            servicesGridView.AllowUserToAddRows = false;
-            servicesGridView.AllowUserToDeleteRows = false;
-            servicesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            servicesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnOfDisplayName,
-            this.ColumnOfServiceName,
-            this.ColumnOfServiceState,
-            this.ColumnToChangeState});
-            servicesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            servicesGridView.Location = new System.Drawing.Point(10, 10);
-            servicesGridView.MultiSelect = false;
-            servicesGridView.Name = "servicesGridView";
-            servicesGridView.ReadOnly = true;
-            servicesGridView.RowHeadersVisible = false;
-            servicesGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("BIZ UDゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            servicesGridView.RowTemplate.Height = 30;
-            servicesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            servicesGridView.Size = new System.Drawing.Size(604, 421);
-            servicesGridView.TabIndex = 2;
-            servicesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnServicesGridViewCellContentClick);
-            // 
             // ColumnOfDisplayName
             // 
             this.ColumnOfDisplayName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -89,6 +66,29 @@ partial class MainForm
             this.ColumnToChangeState.Text = "切替";
             this.ColumnToChangeState.UseColumnTextForButtonValue = true;
             // 
+            // servicesGridView
+            // 
+            servicesGridView.AllowUserToAddRows = false;
+            servicesGridView.AllowUserToDeleteRows = false;
+            servicesGridView.AllowUserToResizeRows = false;
+            servicesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            servicesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnOfDisplayName,
+            this.ColumnOfServiceName,
+            this.ColumnOfServiceState,
+            this.ColumnToChangeState});
+            servicesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            servicesGridView.Location = new System.Drawing.Point(10, 10);
+            servicesGridView.MultiSelect = false;
+            servicesGridView.Name = "servicesGridView";
+            servicesGridView.ReadOnly = true;
+            servicesGridView.RowHeadersVisible = false;
+            servicesGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("BIZ UDゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            servicesGridView.RowTemplate.Height = 30;
+            servicesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            servicesGridView.Size = new System.Drawing.Size(604, 421);
+            servicesGridView.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -99,8 +99,6 @@ partial class MainForm
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "Windows Service Monitor";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(servicesGridView)).EndInit();
             this.ResumeLayout(false);
 
